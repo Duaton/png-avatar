@@ -12,25 +12,49 @@ $ composer require duaton/paint-by-numbers
 
 ## Usage
 
+Case 1:
+
 ``` php
-$skeleton = new League\Skeleton();
-echo $skeleton->echoPhrase('Hello, League!');
+$avatar = new Avatar();
+
+$faces = new \duaton\paint\Base\Faces();
+$ears = new \duaton\paint\Base\Ears();
+$eyes = new \duaton\paint\Base\Eyes();
+$mouths = new \duaton\paint\Base\Mouths();
+$noses = new \duaton\paint\Base\Noses();
+
+$avatarPaint->face($faces->default())
+        ->ears($ears->default())
+        ->eyes($eyes->default())
+        ->mouth($mouths->default())
+        ->nose($noses->default())
+        ->save('full path to directory/fileName.png');
 ```
 
-## Testing
+Case 2:
 
-``` bash
-$ phpunit
+``` php
+
+$faces = new \duaton\paint\Base\Faces();
+$ears = new \duaton\paint\Base\Ears();
+$eyes = new \duaton\paint\Base\Eyes();
+$mouths = new \duaton\paint\Base\Mouths();
+$noses = new \duaton\paint\Base\Noses();
+
+
+$avatar = new Avatar([
+        'face' => $faces->default(), 
+        'hair' => '', 
+        'ears' => $ears->default(), 
+        'eyes' => $eyes->default(), 
+        'mouth' => $mouths->default(), 
+        'beard' => '', 
+        'nose' => $noses->default(), 
+]);
+
+$avatar->save('full path to directory/fileName.png');
 ```
 
-## Contributing
-
-Please see [CONTRIBUTING](https://github.com/thephpleague/:package_name/blob/master/CONTRIBUTING.md) for details.
-
-## Credits
-
-- [:author_name](https://github.com/:author_username)
-- [All Contributors](https://github.com/thephpleague/:package_name/contributors)
 
 ## License
 
