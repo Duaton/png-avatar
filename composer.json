@@ -1,0 +1,40 @@
+{
+    "name": "duaton/png-avatar",
+    "description": "Simple avatars by pixels",
+    "keywords": [
+        "duaton",
+        "paint_by_numbers"
+    ],
+    "homepage": "https://github.com/Duaton/png-avatar",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Max",
+            "email": "metaturned@gmail.com",
+            "homepage": "https://github.com/Duaton",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : ">=7.3.0"
+    },
+    "minimum-stability": "stable",
+    "require-dev": {
+        "phpunit/phpunit" : "4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "duaton\\paint\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "duaton\\paint\\Test\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
