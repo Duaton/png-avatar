@@ -7,7 +7,7 @@
 Via Composer
 
 ``` bash
-$ composer require duaton/paint-by-numbers
+$ composer require duaton/png-avatar
 ```
 
 ## Usage
